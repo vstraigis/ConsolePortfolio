@@ -1,0 +1,193 @@
+body {
+  background-color: #f5a2f5;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+body::before {
+  content: "";
+  background-image: url(/assets/ImageBackground.jpg);
+  /* background-color: rgb(39, 20, 26); */
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.1);
+  position: fixed;
+  z-index: -1;
+  top: -20px;
+  right: -25px;
+}
+
+.everything {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bar {
+  width: 70%;
+  height: 35px;
+  background: #2d2929b1;
+  border-radius: 8px 8px 0 0;
+  text-align: end;
+}
+
+#window {
+  width: 70%;
+  height: 60vh;
+  background: rgba(62, 45, 45, 0.524);
+  border-radius: 0;
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  overflow: hidden;
+  color: #519975;
+  font-family: cursor, monospace;
+  overflow-y: auto;
+  
+
+}
+#terminal {
+  position: relative;
+  width: 100%;
+  
+}
+::selection {
+  color: #211830;
+  background-color: #519975;
+}
+::-moz-selection {
+  color: #211830;
+  background-color: #519975;
+}
+/* ONLY CURSOR BELLOW */
+.cursor {
+  font-size: 12px;
+  color: #73ABAD;
+  background-color: #73ABAD;
+  position: relative;
+  opacity: 1;
+  height: 1.5em;
+  width: 10px;
+  max-width: 10px;
+  transform: translateY(4px);
+  overflow: hidden;
+  text-indent: -5px;
+  display: inline-block;
+  text-decoration: blink;
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+#command {
+  cursor: text;
+  height: 50px;
+  color: #73ABAD;
+  margin-left: 15px;
+  
+}
+#liner {
+  line-height: 1.3em;
+  margin-top: -2px;
+
+  animation-delay: 0.5s;
+  opacity: 1;
+ 
+}
+#liner::before {
+  color: #519975;
+  content: "guest@straigis.com:~$";
+  
+}
+
+textarea {
+  left: -1000px;
+  position: absolute;
+}
+b {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* CURSOR END*/
+p {
+  display: block;
+  width: 100%;
+  line-height: 1.3em;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  margin-left: 15px;
+  letter-spacing: 0.05em;
+  animation: typing 0.5s steps(30, end);
+}
+.no-animation {
+  animation: typing 0 steps(30, end);
+}
+.margin {
+  margin-left: 20px;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.index {
+  color: #DCDCCC;
+}
+.color2 {
+  color: #B89076;
+}
+.command {
+  color: #73ABAD;
+}
+.error {
+  color: #B89076;
+}
+.white {
+  color: #fff;
+}
+.inherit,
+a {
+  color: #9C8394;
+}
+a {
+  text-decoration: inherit;
+}
+a:hover {
+  background: #73ABAD;
+  color: #211830;
+}
+a:focus {
+  outline: 0;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(62, 45, 45, 0.524); ; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(74, 78, 74, 0.573); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(85, 87, 85, 0.573);  
+}
