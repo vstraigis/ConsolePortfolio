@@ -10,7 +10,7 @@ body {
 
 body::before {
   content: "";
-  background-image: url(./assets/ImageBackground.jpg);
+  background-image: url(../assets/ImageBackground.jpg);
   /* background-color: rgb(39, 20, 26); */
   height: 100%;
   width: 100%;
