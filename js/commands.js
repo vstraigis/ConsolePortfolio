@@ -1,9 +1,11 @@
-//Heavily inspired by: ForrestKnight
-
 var instagram = "https://www.instagram.com/straigiz/";
 var github = "https://github.com/vstraigis/";
 var email = 'mailto:straigiz@gmail.com';
-var rick = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+var mail = "straigiz@gmail.com";
+var rick = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+var linkinbio ="https://vstraigis.github.io/"
+var calculator = "https://github.com/vstraigis/CalculatorWithExpressionParser";
+var recipe = "https://github.com/vstraigis/RecipeList"
 
 whois = [
   "<br>",
@@ -24,14 +26,19 @@ whoami = [
 
 social = [
   "<br>",
-//   'linkedin       <a href="' + linkedin + '" target="_blank">linkedin/forrestpknight' + "</a>",
   'github         <a href="' + github + '" target="_blank">github/vstraigis' + "</a>",
+  "<br>",
+  'Email         <a href="' + email + '" target="_blank">straigiz@gmail.com' + "</a>",
   "<br>"
 ];
 
 projects = [
   "<br>",
-  "Coming up soon, this website is on constant development! Stay tuned!",
+  '<a href="' + linkinbio + '" target="_blank">Link in Bio          ' + "</a> Link in Bio page with interactive particles ",
+  "<br>",
+  '<a href="' + calculator + '" target="_blank">Calculator          ' + "</a> Calculator with expression parser",
+  "<br>",
+  '<a href="' + recipe + '" target="_blank">Recipe List          ' + "</a> Interactive recipe list application",
   "<br>"
 ];
 
@@ -55,3 +62,5 @@ su = [
   "Enter the password:",
   "<br>"
 ];
+
+//Heavily inspired by: ForrestKnight
