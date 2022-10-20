@@ -63,4 +63,3 @@ su = [
   "<br>"
 ];
 
-//Heavily inspired by: ForrestKnight
