@@ -176,7 +176,7 @@ function commander(cmd) {
         newTab(rick);
         break;
       default:
-        addLine("<br>", "color2", 120);
+        addLine("<br>", "color2", 99);
         addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'help'</span>.</span>", "error margin", 100);
         addLine("<br>", "color2", 101);
         break;
