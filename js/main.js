@@ -1,5 +1,3 @@
-//Heavily inspired by: ForrestKnight
-
 banner = [
   '<span class="index">Valentinas Straigis. My rights neither reserved neither deserved.</span>',
   "   __      __        _____ _             _       _        ",
@@ -17,15 +15,18 @@ banner = [
 ];
 
 var before = document.getElementById("before");
-var liner = document.getElementById("liner");
+var liner = document.querySelector(".liner");
 var command = document.getElementById("typer");
 var textarea = document.getElementById("texter");
 var terminal = document.getElementById("terminal");
+var vazowski = document.querySelector('.sudormrf');
+var everything = document.querySelector('.everything');
 
 var git = 0;
 var pw = false;
 let pwd = false;
 var commands = [];
+let supass = 0;
 
 const command1 = document.getElementById("command")
 let c = 0
@@ -38,8 +39,6 @@ setTimeout(function () {
 
 window.addEventListener("keyup", enterKey);
 
-
-//init
 textarea.value = "";
 command.innerHTML = textarea.value;
 
@@ -47,21 +46,28 @@ function enterKey(e) {
   if (e.keyCode == 181) {
     document.location.reload(true);
   }
-  if (e.keyCode == 13) {
+  if (e.keyCode == 13) {                      // 13- enter
     commands.push(command.innerHTML);
     git = commands.length;
+    if (supass == 1) {
+      addLine("Enter the password: " + command.innerHTML, "no-animation", 0);
+      commander(command.innerHTML.toLowerCase());
+      command.innerHTML = "";
+      textarea.value = "";
+    } else {
     addLine("guest@straigis.com:~$ " + command.innerHTML, "no-animation", 0);
     commander(command.innerHTML.toLowerCase());
     command.innerHTML = "";
     textarea.value = "";
+    }
 
   }
-  if (e.keyCode == 38 && git != 0) {
+  if (e.keyCode == 38 && git != 0) {    // 38 - arrow up
     git -= 1;
     textarea.value = commands[git];
     command.innerHTML = textarea.value;
   }
-  if (e.keyCode == 40 && git != commands.length) {
+  if (e.keyCode == 40 && git != commands.length) {  // 40 -  arrow down
     git += 1;
     if (commands[git] === undefined) {
       textarea.value = "";
@@ -72,66 +78,124 @@ function enterKey(e) {
   }
 }
 
+function sudorm() {
+  vazowski.classList.toggle('vazowski');
+  everything.classList.toggle('vazis');
+}
+
 
 function commander(cmd) {
-  switch (cmd.toLowerCase()) {
-    case "help":
-      loopLines(help, "color2 margin", 80);
-      break;
-    case "whois":
-      loopLines(whois, "color2 margin", 80);
-      break;
-    case "whoami":
-      loopLines(whoami, "color2 margin", 80);
-      break;
-    case "sudo":
-      loopLines(su, "color2 margin", 80);
-      break;
-    case "su":
-      loopLines(su, "color2 margin", 80);
-      break;
-    case "passwd":
-      loopLines(su, "color2 margin", 80);
-      break;
-    case "passwd root":
-      loopLines(su, "color2 margin", 80);
-      break;
-    case "social":
-      loopLines(social, "color2 margin", 80);
-      break;
-    case "projects":
-      loopLines(projects, "color2 margin", 80);
-      break;
-    case "history":
-      addLine("<br>", "", 0);
-      loopLines(commands, "color2", 80);
-      addLine("<br>", "command", 80 * commands.length + 50);
-      break;
-    case "email":
-      addLine('Opening mailto:<a href="mailto:straigiz@gmail.com">straigiz@gmail.com</a>...', "color2", 80);
-      newTab(email);
-      break;
-    case "clear":
-      setTimeout(function () {
-        terminal.innerHTML = '<a id="before"></a>';
-        before = document.getElementById("before");
-      }, 1);
-      break;
-    case "linkedin":
-      addLine("Oops, not there yet...", "color2", 0);
-      //newTab(linkedin);
-      break;
-    case "github":
-      addLine("Opening GitHub...", "color2", 0);
-      newTab(github);
-      break;
-    case "rick":
-      addLine("Gotcha...", "color2", 0);
+  if (supass == 0) {
+    switch (cmd.toLowerCase()) {
+      case "help":
+        loopLines(help, "color2 margin", 120);
+        break;
+      case "whois":
+        loopLines(whois, "color2 margin", 120);
+        break;
+      case "whoami":
+        loopLines(whoami, "color2 margin", 120);
+        break;
+      case "sudo":
+        loopLines(su, "color2 margin", 120);
+        liner.style.setProperty('--galpavyks', '"Enter the password:"');
+        supass++;
+        break;
+      case "su":
+        loopLines(su, "color2 margin", 120);
+        liner.style.setProperty('--galpavyks', '"Enter the password:"');
+        supass++;
+        break;
+      case "passwd":
+        loopLines(su, "color2 margin", 120);
+        liner.style.setProperty('--galpavyks', '"Enter the password:"');
+        supass++;
+        break;
+      case "passwd root":
+        loopLines(su, "color2 margin", 120);
+        liner.style.setProperty('--galpavyks', '"Enter the password:"');
+        supass++;
+        break;
+      case "social":
+        loopLines(social, "color2 margin", 120);
+        break;
+      case "projects":
+        loopLines(projects, "color2 margin", 120);
+        break;
+      case "history":
+        addLine("<br>", "", 0);
+        loopLines(commands, "color2", 120);
+        addLine("<br>", "command", 120 * commands.length + 120);
+        break;
+      case "email":
+        addLine('Opening mailto:<a href="mailto:straigiz@gmail.com">straigiz@gmail.com</a>...', "color2 margin", 120);
+        newTab(email);
+        break;
+      case "sudo rm -rf":
+        liner.style.setProperty('--galpavyks', '"Enter the password:"');
+        supass++;
+        sudorm();
+        break;
+      case "sudo rm -rf /*":
+        liner.style.setProperty('--galpavyks', '"Enter the password:"');
+        supass++;
+        sudorm();
+        break;
+      case "sudo rm -rf *":
+        liner.style.setProperty('--galpavyks', '"Enter the password:"');
+        supass++;
+        sudorm();
+        break;
+      case "rm -rf":
+        addLine("Missing sudo rights...", "color2 margin", 120);
+        break;
+      case "rm -rf *":
+        addLine("Missing sudo rights...", "color2 margin", 120);
+        break;
+      case "rm -rf /*":
+        addLine("Missing sudo rights...", "color2 margin", 120);
+        break;
+      case "clear":
+        setTimeout(function () {
+          terminal.innerHTML = '<a id="before"></a>';
+          before = document.getElementById("before");
+        }, 1);
+        break;
+      case "linkedin":
+        addLine("Oops, not there yet...", "color2 margin", 120);
+        //newTab(linkedin);
+        break;
+      case "github":
+        addLine("Opening GitHub...", "color2 margin", 120);
+        newTab(github);
+        break;
+      case "rick":
+        supass = 0;
+        addLine("Gotcha...", "color2 margin", 120);
+        addLine("<br>", "color2", 120);
+        newTab(rick);
+        break;
+      default:
+        addLine("<br>", "color2", 120);
+        addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'help'</span>.</span>", "error margin", 100);
+        addLine("<br>", "color2", 101);
+        break;
+    }
+  } else {
+    if (cmd != "rick") {
+      supass = 0;
+      addLine("<br>", "color2", 120);
+      addLine(" Wrong password", "color2 margin", 120);
+      addLine("<br>", "color2", 120);
+      liner.style.setProperty('--galpavyks', '"guest@straigis.com:~$"');
+    } else {
+      supass = 0;
+      addLine("<br>", "color2", 120);
+      addLine(" Gotcha...", "color2 margin", 120);
+      addLine("<br>", "color2", 120);
       newTab(rick);
-      break;
-    default:
-      addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'help'</span>.</span>", "error", 100);
-      break;
+      liner.style.setProperty('--galpavyks', '"guest@straigis.com:~$"');
+    }
   }
 }
 
@@ -177,31 +241,31 @@ var cursor;
 window.onload = init;
 
 function init() {
-cursor = $("cursor");
-cursor.style.left = "0px";
+  cursor = $("cursor");
+  cursor.style.left = "0px";
 }
 
 function nl2br(txt) {
-return txt.replace(/\n/g, '');
+  return txt.replace(/\n/g, '');
 }
 
 function typeIt(from, e) {
-e = e || window.event;
-var w = $("typer");
-var tw = from.value;
-w.innerHTML = nl2br(tw);
+  e = e || window.event;
+  var w = $("typer");
+  var tw = from.value;
+  w.innerHTML = nl2br(tw);
 }
 
 function moveIt(count, e) {
-e = e || window.event;
-var keycode = e.keyCode || e.which;
-if (keycode == 37 && parseInt(cursor.style.left) >= (0 - ((count - 1) * 10))) {
-  cursor.style.left = parseInt(cursor.style.left) - 10 + "px";
-} else if (keycode == 39 && (parseInt(cursor.style.left) + 10) <= 0) {
-  cursor.style.left = parseInt(cursor.style.left) + 10 + "px";
-}
+  e = e || window.event;
+  var keycode = e.keyCode || e.which;
+  if (keycode == 37 && parseInt(cursor.style.left) >= (0 - ((count - 1) * 10))) {
+    cursor.style.left = parseInt(cursor.style.left) - 10 + "px";
+  } else if (keycode == 39 && (parseInt(cursor.style.left) + 10) <= 0) {
+    cursor.style.left = parseInt(cursor.style.left) + 10 + "px";
+  }
 }
 
 function alert(txt) {
-console.log(txt);
+  console.log(txt);
 }

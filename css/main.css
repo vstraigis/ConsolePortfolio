@@ -10,7 +10,7 @@ body {
 
 body::before {
   content: "";
-  background-image: url(../assets/ImageBackground.jpg);
+  background-image: url(/assets/ImageBackground.jpg);
   /* background-color: rgb(39, 20, 26); */
   height: 100%;
   width: 100%;
@@ -22,6 +22,9 @@ body::before {
   top: -20px;
   right: -25px;
 }
+.sudormrf {
+  display: none;
+}
 
 .everything {
   display: flex;
@@ -29,6 +32,19 @@ body::before {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+}
+.vazowski {
+  display: inline;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://i.kym-cdn.com/entries/icons/original/000/031/003/cover3.jpg");
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+}
+
+.vazis {
+  display: none;
 }
 
 .bar {
@@ -95,19 +111,29 @@ body::before {
   margin-left: 15px;
   
 }
-#liner {
+.liner {
   line-height: 1.3em;
   margin-top: -2px;
 
   animation-delay: 0.5s;
   opacity: 1;
+  --galpavyks: "guest@straigis.com:~$";
  
 }
-#liner::before {
+
+
+.liner::before {
   color: #519975;
   content: "guest@straigis.com:~$";
-  
+  content: var(--galpavyks);
 }
+
+
+
+/* .passwd {
+  color: #711010;
+  content: "Enter Your password";
+} */
 
 textarea {
   left: -1000px;
@@ -191,3 +217,4 @@ a:focus {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(85, 87, 85, 0.573);  
 }
+
