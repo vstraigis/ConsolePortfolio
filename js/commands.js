@@ -1,3 +1,5 @@
+
+
 var instagram = "https://www.instagram.com/straigiz/";
 var github = "https://github.com/vstraigis/";
 var email = 'mailto:straigiz@gmail.com';
@@ -52,14 +54,14 @@ help = [
   '<span class="command">help</span>           Display available commands',
   '<span class="command">email</span>          Ask me something',
   '<span class="command">clear</span>          Clear terminal',
+  '<span class="command">sudo rm -rf</span>    Remove everything',
   "<br>",
 ];
 
 su = [
   "<br>",
   "Shhh, don't tell anyone, but the password is 'rick'",
-  "<br>",
-  "Enter the password:",
   "<br>"
 ];
 
+//Heavily inspired by: ForrestKnight
