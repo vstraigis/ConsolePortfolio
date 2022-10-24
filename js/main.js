@@ -9,6 +9,8 @@ banner = [
   '<span class="nowrap">                                            __/ |         </span>',
   '<span class="nowrap">                                           |___/          </span>',
   '<span class="nowrap">                                                            </span>',
+  '<span>                                                            </span>',
+  '<span>                                                            </span>',
   '<span class="color2">For a list of available commands, type</span> <span class=\"command\">\'help\'</span><span class=\"color2\">.</span>',
   '<span class="color2">And good luck finding some hidden ones:)</span>',
   '</br>',
@@ -32,9 +34,9 @@ const command1 = document.getElementById("command")
 let c = 0
 
 setTimeout(function () {
-  loopLines(banner, "", 80);
+  loopLines(banner, "", 100);
   textarea.focus();
-}, 100);
+}, 180);
 
 
 window.addEventListener("keyup", enterKey);
@@ -88,47 +90,47 @@ function commander(cmd) {
   if (supass == 0) {
     switch (cmd.toLowerCase()) {
       case "help":
-        loopLines(help, "color2 margin", 120);
+        loopLines(help, "color2 margin", 150);
         break;
       case "whois":
-        loopLines(whois, "color2 margin", 120);
+        loopLines(whois, "color2 margin", 150);
         break;
       case "whoami":
-        loopLines(whoami, "color2 margin", 120);
+        loopLines(whoami, "color2 margin", 150);
         break;
       case "sudo":
-        loopLines(su, "color2 margin", 120);
+        loopLines(su, "color2 margin", 150);
         liner.style.setProperty('--galpavyks', '"Enter the password:"');
         supass++;
         break;
       case "su":
-        loopLines(su, "color2 margin", 120);
+        loopLines(su, "color2 margin", 150);
         liner.style.setProperty('--galpavyks', '"Enter the password:"');
         supass++;
         break;
       case "passwd":
-        loopLines(su, "color2 margin", 120);
+        loopLines(su, "color2 margin", 150);
         liner.style.setProperty('--galpavyks', '"Enter the password:"');
         supass++;
         break;
       case "passwd root":
-        loopLines(su, "color2 margin", 120);
+        loopLines(su, "color2 margin", 150);
         liner.style.setProperty('--galpavyks', '"Enter the password:"');
         supass++;
         break;
       case "social":
-        loopLines(social, "color2 margin", 120);
+        loopLines(social, "color2 margin", 150);
         break;
       case "projects":
-        loopLines(projects, "color2 margin", 120);
+        loopLines(projects, "color2 margin", 150);
         break;
       case "history":
         addLine("<br>", "", 0);
-        loopLines(commands, "color2", 120);
-        addLine("<br>", "command", 120 * commands.length + 120);
+        loopLines(commands, "color2", 150);
+        addLine("<br>", "command", 150 * commands.length + 150);
         break;
       case "email":
-        addLine('Opening mailto:<a href="mailto:straigiz@gmail.com">straigiz@gmail.com</a>...', "color2 margin", 120);
+        addLine('Opening mailto:<a href="mailto:straigiz@gmail.com">straigiz@gmail.com</a>...', "color2 margin", 150);
         newTab(email);
         break;
       case "sudo rm -rf":
@@ -147,13 +149,13 @@ function commander(cmd) {
         sudorm();
         break;
       case "rm -rf":
-        addLine("Missing sudo rights...", "color2 margin", 120);
+        addLine("Missing sudo rights...", "color2 margin", 150);
         break;
       case "rm -rf *":
-        addLine("Missing sudo rights...", "color2 margin", 120);
+        addLine("Missing sudo rights...", "color2 margin", 150);
         break;
       case "rm -rf /*":
-        addLine("Missing sudo rights...", "color2 margin", 120);
+        addLine("Missing sudo rights...", "color2 margin", 150);
         break;
       case "clear":
         setTimeout(function () {
@@ -162,17 +164,17 @@ function commander(cmd) {
         }, 1);
         break;
       case "linkedin":
-        addLine("Oops, not there yet...", "color2 margin", 120);
+        addLine("Oops, not there yet...", "color2 margin", 150);
         //newTab(linkedin);
         break;
       case "github":
-        addLine("Opening GitHub...", "color2 margin", 120);
+        addLine("Opening GitHub...", "color2 margin", 150);
         newTab(github);
         break;
       case "rick":
         supass = 0;
-        addLine("Gotcha...", "color2 margin", 120);
-        addLine("<br>", "color2", 120);
+        addLine("Gotcha...", "color2 margin", 150);
+        addLine("<br>", "color2", 150);
         newTab(rick);
         break;
       default:
@@ -184,15 +186,15 @@ function commander(cmd) {
   } else {
     if (cmd != "rick") {
       supass = 0;
-      addLine("<br>", "color2", 120);
-      addLine(" Wrong password", "color2 margin", 120);
-      addLine("<br>", "color2", 120);
+      addLine("<br>", "color2", 150);
+      addLine(" Wrong password", "color2 margin", 150);
+      addLine("<br>", "color2", 150);
       liner.style.setProperty('--galpavyks', '"guest@straigis.com:~$"');
     } else {
       supass = 0;
-      addLine("<br>", "color2", 120);
-      addLine(" Gotcha...", "color2 margin", 120);
-      addLine("<br>", "color2", 120);
+      addLine("<br>", "color2", 150);
+      addLine(" Gotcha...", "color2 margin", 150);
+      addLine("<br>", "color2", 140);
       newTab(rick);
       liner.style.setProperty('--galpavyks', '"guest@straigis.com:~$"');
     }
