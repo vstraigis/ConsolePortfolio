@@ -11,7 +11,7 @@ banner = [
   '<span class="nowrap">                                                            </span>',
   '<span>                                                            </span>',
   '<span>                                                            </span>',
-  '<span class="color2">For a list of available commands, type</span> <span class=\"command\">\'help\'</span><span class=\"color2\">.</span>',
+  '<span class="color2">For a list of available commands, type</span><span class="command">\'help\'</span><span class="color2">.</span>',
   '<span class="color2">And good luck finding some hidden ones:)</span>',
   '</br>',
 ];
