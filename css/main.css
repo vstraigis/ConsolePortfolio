@@ -150,11 +150,13 @@ p {
   width: 100%;
   line-height: 1.3em;
   overflow: hidden;
-  white-space: nowrap;
   margin: 0;
   margin-left: 15px;
   letter-spacing: 0.05em;
   animation: typing 0.5s steps(30, end);
+}
+.nowrap {
+  white-space: nowrap;
 }
 .no-animation {
   animation: typing 0 steps(30, end);
