@@ -5,7 +5,7 @@ var github = "https://github.com/vstraigis/";
 var email = 'mailto:straigiz@gmail.com';
 var mail = "straigiz@gmail.com";
 var rick = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-var linkinbio ="https://straigis.com/LinkInBioWithParticles/"
+var linkinbio ="https://vstraigis.github.io/LinkInBioWithParticles/"
 var calculator = "https://github.com/vstraigis/CalculatorWithExpressionParser";
 var recipe = "https://github.com/vstraigis/RecipeList"
 
