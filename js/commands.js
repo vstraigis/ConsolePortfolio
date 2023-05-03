@@ -8,6 +8,7 @@ var rick = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 var linkinbio ="https://vstraigis.github.io/LinkInBioWithParticles/"
 var calculator = "https://github.com/vstraigis/CalculatorWithExpressionParser";
 var recipe = "https://github.com/vstraigis/RecipeList"
+var linkedin = "https://www.linkedin.com/in/vstraigis/"
 
 whois = [
   "<br>",
@@ -28,9 +29,11 @@ whoami = [
 
 social = [
   "<br>",
-  'github         <a href="' + github + '" target="_blank">github/vstraigis' + "</a>",
+  'github        <a href="' + github + '" target="_blank">github/vstraigis' + "</a>",
   "<br>",
   'Email         <a href="' + email + '" target="_blank">straigiz@gmail.com' + "</a>",
+  "<br>",
+  'Linkedin      <a href="' + linkedin + '" target="_blank">linkedin.com/in/vstraigis/' + "</a>",
   "<br>"
 ];
 
